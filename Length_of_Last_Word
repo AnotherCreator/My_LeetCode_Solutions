@@ -1,0 +1,22 @@
+#Python3
+
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        # Reverse the string
+        s = s[::-1]
+        i = 0
+        word_len = 0
+        
+        # First determine the offset if there are any leading empty spaces
+        for character in s:
+            if character == " ":
+                i += 1
+            else:
+                while i < len(s):
+                    if s[i] != " ":
+                        word_len += 1
+                        i += 1
+                    else:
+                        break
+        
+                return word_len
