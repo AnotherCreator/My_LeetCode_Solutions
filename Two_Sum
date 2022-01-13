@@ -1,0 +1,51 @@
+# Python3
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        
+#         i = 0
+#         output = []
+        
+#         while i < len(nums):
+#             j = i + 1
+#             while j < len(nums):
+#                 total = nums[i] + nums[j]
+#                 if total == target:
+#                     output = [i, j]
+#                     return output
+#                 j += 1
+#             i += 1
+
+        for i, value in enumerate(nums):
+            j = i + 1
+            while j < len(nums):
+                if target == value + nums[j]:
+                    return [i, j]
+                j += 1
+
+# Java
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int i = 0;
+        int[] output = {0, 0};
+
+        while (i < nums.length) {
+            int j = i + 1;
+            while (j < nums.length) {
+                int total = nums[i] + nums[j];
+                if (total == target) {
+                    output[0] = i;
+                    output[1] = j;
+                    return output;
+                }   
+            j += 1;
+            }
+         i += 1;
+        }
+        return output;
+    }
+}
