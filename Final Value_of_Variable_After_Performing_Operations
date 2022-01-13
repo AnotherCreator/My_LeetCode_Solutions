@@ -1,0 +1,17 @@
+# Java  
+class Solution {
+    public int finalValueAfterOperations(String[] operations) {
+        HashMap<String, Integer> incrementOperations = new HashMap<String, Integer>();
+        
+        incrementOperations.put("++X", 1);
+        incrementOperations.put("X++", 1);
+        incrementOperations.put("--X", -1);
+        incrementOperations.put("X--", -1);
+        
+        int X = 0;
+        for (int i = 0; i < operations.length; i++) {
+            X = X + incrementOperations.get(operations[i]);
+        }
+        return X;
+    }
+}
