@@ -1,0 +1,14 @@
+# Java
+class Solution {
+    public String toLowerCase(String s) {
+        
+        /*
+        String sLower;
+        
+        sLower = s.toLowerCase();
+        return sLower;
+        */
+        
+        return s.toLowerCase();
+    }
+}
