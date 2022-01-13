@@ -1,0 +1,12 @@
+# Python3
+class Solution(object):
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        
+        x_string = str(x)
+        x_reverse = x_string[::-1]    
+        
+        return(x_string == x_reverse)
