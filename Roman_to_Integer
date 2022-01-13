@@ -1,0 +1,30 @@
+# Python3
+class Solution(object):
+    def romanToInt(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        
+        roman_conversion = {
+            "I":1,
+            "V":5,
+            "X":10,
+            "L":50,
+            "C":100,
+            "D":500,
+            "M":1000
+        }
+        
+        total = 0
+        prev = 0
+        for letter in reversed(s):
+            if prev <= roman_conversion[letter] or total == 0:
+                total = total + roman_conversion[letter]
+                prev = roman_conversion[letter]
+
+            elif prev > roman_conversion[letter]:
+                total = total - roman_conversion[letter]
+                prev = roman_conversion[letter]
+            
+        return(total)
