@@ -1,0 +1,12 @@
+# Python3
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        seen = {}
+        
+        for i, val in enumerate(nums):
+            if val not in seen:
+                seen[val] = i
+            else:
+                return True
+            
+        return False
