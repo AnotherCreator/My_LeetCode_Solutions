@@ -1,0 +1,14 @@
+# Python3
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        new_number = ''
+        new_array = []
+
+        for i in digits:
+            new_number = str(new_number) + str(i)
+        new_number = int(new_number) + 1
+
+        for j, val in enumerate(str(new_number)):
+            new_array.append(int(val))
+
+        return(new_array)
